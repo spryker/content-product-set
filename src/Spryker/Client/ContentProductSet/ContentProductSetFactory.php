@@ -17,9 +17,6 @@ use Spryker\Shared\ContentProductSet\ContentProductSetConfig;
 
 class ContentProductSetFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ContentProductSet\Mapper\ContentProductSetTypeMapperInterface
-     */
     public function createContentProductSetTypeMapper(): ContentProductSetTypeMapperInterface
     {
         return new ContentProductSetTypeMapper(
@@ -38,17 +35,11 @@ class ContentProductSetFactory extends AbstractFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Client\ContentProductSet\Executor\ContentProductSetTermExecutorInterface
-     */
     public function createProductSetTermToProductSetTypeExecutor(): ContentProductSetTermExecutorInterface
     {
         return new ProductSetTermToProductSetTypeExecutor();
     }
 
-    /**
-     * @return \Spryker\Client\ContentProductSet\Dependency\Client\ContentProductSetToContentStorageClientInterface
-     */
     public function getContentStorageClient(): ContentProductSetToContentStorageClientInterface
     {
         return $this->getProvidedDependency(ContentProductSetDependencyProvider::CLIENT_CONTENT_STORAGE);

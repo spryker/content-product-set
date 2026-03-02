@@ -13,11 +13,6 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 class ProductSetTermToProductSetTypeExecutor implements ContentProductSetTermExecutorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentProductSetTypeTransfer
-     */
     public function execute(ContentTypeContextTransfer $contentTypeContextTransfer): ContentProductSetTypeTransfer
     {
         $contentProductSetTermTransfer = $this->mapContentTypeContextTransferToContentProductSetTermTransfer(
@@ -30,11 +25,6 @@ class ProductSetTermToProductSetTypeExecutor implements ContentProductSetTermExe
         return $contentProductSetTypeTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentProductSetTermTransfer
-     */
     protected function mapContentTypeContextTransferToContentProductSetTermTransfer(
         ContentTypeContextTransfer $contentTypeContextTransfer
     ): ContentProductSetTermTransfer {
